@@ -1,0 +1,297 @@
+!!!5
+%html(lang="en")
+  %head
+    %meta{:charset => 'utf-8'}
+    %title Chord Crazy
+    
+    %script{:type => "text/javascript", :src => "js/three/three.min.js"}
+    %script{:type => "text/javascript", :src => "js/three/uclass_BeveledBlockGeometry.js"}
+    %script{:type => "text/javascript", :src => "js/fonts/optimer_bold.typeface.js"}
+    %script{:type => "text/javascript", :src => "js/fonts/optimer_regular.typeface.js"}
+
+    %script{:type => "text/javascript", :src => "js/sound/MIDI/AudioDetect.js"}
+    %script{:type => "text/javascript", :src => "js/sound/MIDI/LoadPlugin.js"}
+    %script{:type => "text/javascript", :src => "js/sound/MIDI/Plugin.js"}
+    %script{:type => "text/javascript", :src => "js/sound/MIDI/Player.js"}
+    %script{:type => "text/javascript", :src => "js/sound/Window/DOMLoader.XMLHttp.js"}
+    %script{:type => "text/javascript", :src => "js/sound/Window/DOMLoader.script.js"}
+    %script{:type => "text/javascript", :src => "js/sound/Window/Event.js"}
+    %script{:type => "text/javascript", :src => "js/sound/Widgets/Loader.js"}
+    %script{:type => "text/javascript", :src => "js/sound/inc/WebMIDIAPI.js"}
+    %script{:type => "text/javascript", :src => "js/sound/inc/Base64.js"}
+    %script{:type => "text/javascript", :src => "js/sound/inc/base64binary.js"}
+    
+    %script{:type => "text/javascript", :src => "js/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "js/jquery-ui.min.js"}
+
+    %script{:type => "text/javascript", :src => "/js/views/guide.js"}
+    
+    %link{:rel => "stylesheet", :href => "css/jquery-ui.dark-hive.min.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "css/keyboard.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "css/qunit.css", :type => "text/css"}
+    
+    -#%script{:type => "text/javascript", :src => "/js/qunit/qunit.js"}    
+      %script{:type => "text/javascript", :src => "/js/tests.js"}      
+
+  %body#body
+    %h2.title
+      FROM MAJOR TRIAD TO MAJOR SCALE
+      
+    #keyboard
+      %script{:type => "text/javascript", :src => "js/key_geometry.js"}
+      %script{:type => "text/javascript", :src => "js/keyboard.js"}
+      
+    #tabs
+      %ul
+        %li
+          %a{:href => "#tabs-1"}
+            The Question
+        %li
+          %a{:href => "#tabs-2"}
+            The Word
+        %li
+          %a{:href => "#tabs-3"}
+            Do What?
+        %li
+          %a{:href => "#tabs-4"}
+            How?
+        %li
+          %a{:href => "#tabs-5"}
+            Examples
+        %li
+          %a{:href => "#tabs-6"}
+            Black Keys
+        %li
+          %a{:href => "#tabs-7"}
+            Sing Along
+        %li
+          %a{:href => "#practice"}
+            Practice
+        %li
+          %a{:href => "#major_scale"}
+            Major Scale
+
+        #tabs-1.content
+          %br
+          %p
+            Can Every Good Boy Do Fine At Chess?
+        #tabs-2.content
+          %br
+          %p
+            BEAD
+        #tabs-3.content
+          %br
+          %p
+            Use the question, Can Every Good Boy Do Fine At Chess?, and the word, BEAD, to create and play the twelve major triad chords on a piano.
+          %p
+            A major triad is a group of three particular notes in a major scale. These three notes are the tonic or first note of the major scale,
+            the third note of the major scale, and the fifth note of the major scale.
+          %p
+            The tonic of the major scale becomes the root of the major chord.
+            The third note becomes the major third of the chord relative. The fifth note becomes the major fifth of the chord. 
+          %p
+            There are twelve major triads. On a piano keyboard, the root note is a white key for seven of the major triads and a black key for the other five major triads.
+        #tabs-4.content
+          %br
+          %p
+            To create a major triad chord, select the first letter of three consecutive words in The Question, then use The Word to put the sharps in the right places.
+          %p
+            If the root note of the chord is a letter in the word, BEAD, add a sharp to the note in the middle, the third.
+          %p
+            If the root note is B, add a sharp to the last note, the fifth, too.
+        #tabs-5.content
+          %br
+          %p
+            Can Every Good Boy Do Fine At Chess?
+          %p
+            C major triad: The three consecutive words are Can Every Good => C E G. Since C is not in the word BEAD, there are no sharps.
+          %p
+            A major triad: The three consecutive words are At Chess?/Can Every => A C E. Since A is in the word BEAD, add a sharp to C => A C# E.
+          %p
+            The rest are...
+          %table
+            %tr
+              %td
+                B
+              %td
+                \=> Boy Do Fine
+              %td
+                \=> B D F => add sharps
+              %td
+                \=> B D# F# 
+            %tr
+              %td
+                D
+              %td
+                \=> Do Fine At
+              %td
+                \=> D F A => add sharp
+              %td
+                \=> D F# A
+            %tr
+              %td
+                E
+              %td
+                \=> Every Good Boy
+              %td
+                \=> E G B => add sharp
+              %td
+                \=> E G# B
+            %tr
+              %td
+                F
+              %td
+                \=> Fine At Chess
+              %td
+                \=> F A C
+            %tr
+              %td
+                G
+              %td
+                \=> Good Boy Do
+              %td
+                \=> G B D
+          %p
+            You now know how to create every major triad chord with the root note on a white key.
+        #tabs-6.content
+          %br
+          %p
+            The black keys are Bb, Eb, Ab, Db, and Gb, also known as, A#, D#, G#, C#, and F#.
+          %p
+            The same three notes in a major triad starting on a white key are in the major chord triad start on a black key, but they are shifted down a half step from the positions for the white keys. To move down a half step on a piano, move one key to the left.
+          %p
+            For these major chords, the natural notes become flat notes, and the sharp notes become natural notes.
+          %table
+            %tr
+              %td
+                Bb
+              %td
+                \=> Boy Do Fine
+              %td
+                \=> Bb D F
+            %tr
+              %td
+                Eb
+              %td
+                \=> Every Good Boy
+              %td
+                \=> Eb G Bb
+            %tr
+              %td
+                Ab
+              %td
+                \=> At Chess?/Can Every
+              %td
+                \=> Ab C Eb
+            %tr
+              %td
+                Db
+              %td
+                \=> Do Fine At
+              %td
+                \=> Db F Ab
+            %tr
+              %td
+                Gb
+              %td
+                \=> Good Boy Do
+              %td
+                \=> Gb Bb Db
+        #tabs-7.content
+          %br
+          %p
+            Click on the song to play it, sing along, and remember.
+          %br
+            %img#questionable{:src => "songs/TheQuestionableSong.png", :height => 300, :width => 600}
+          %br
+            %audio#q_song
+              %source{:src => "songs/TheQuestionableSong.ogg", :type => "audio/ogg"}
+              %source{:src => "songs/TheQuestionableSong.wav", :type => "audio/wav"}
+          %a{:href => "songs/TheQuestionableSong.ogg"} Download ogg file
+          %br
+          %a{:href => "songs/TheQuestionableSong.wav"} Download wav file
+          
+          %br
+            %img#ceg{:src => "songs/CEGBDFAC.png", :height => 300, :width => 600}
+          %br
+            %audio#ceg_song
+              %source{:src => "songs/CEGBDFAC.ogg", :type => "audio/ogg"}
+              %source{:src => "songs/CEGBDFAC.wav", :type => "audio/wav"}
+          %a{:href => "songs/CEGBDFAC.ogg"} Download ogg file
+          %br
+          %a{:href => "songs/CEGBDFAC.wav"} Download wav file
+              
+          %br
+            %img#bead{:src => "songs/TheBeadSong.png", :height => 300, :width => 600}
+          %br
+            %audio#b_song
+              %source{:src => "songs/TheBeadSong.ogg", :type => "audio/ogg"}
+              %source{:src => "songs/TheBeadSong.wav", :type => "audio/wav"}
+          %a{:href => "songs/TheBeadSong.ogg"} Download ogg file
+          %br
+          %a{:href => "songs/TheBeadSong.wav"} Download wav file
+              
+        #practice
+          %br
+          %p
+            Mouse over the keyboard to display the name of a major triad.
+          %p
+            Play the three notes of this major triad on any keys in any order.
+          %br
+            If you are right, you will be rewarded with the melodious tones of the chord.
+          %p
+            However, if you are wrong, no music for you.
+          %br
+            To change the major triad, move the mouse off and back onto the keyboard picture.
+          %br
+            %audio#the_fail_song
+              %source{:src => "songs/toneOfFailure.ogg", :type => "audio/ogg"}
+              %source{:src => "songs/toneOfFailure.wav", :type => "audio/wav"}
+
+        #major_scale
+          %br
+          %p
+            A major scale has eight notes, but two notes are the same, the root (first note) and the octave (eighth note).
+          %p
+            Now that you have mastered major triads, you know three of these notes.
+            You will now learn the other four notes.
+          %p
+            A half-step or a whole step up or down from a note in the major triad will land on another note in the major scale.
+          %table
+            %tr
+              %td
+                Second or Ninth Note (2 + 7 = 9)
+              %td
+                \=> a whole step up from the root or a whole step down from the third note
+            %tr
+              %td
+                Fourth or Eleventh Note (4 + 7 = 11)
+              %td
+                \=> a half step up from the third note or a whole step down from the fifth note
+            %tr
+              %td
+                Sixth or Thirteenth Note (6 + 7 = 13)
+              %td
+                \=> a whole step up from the fifth note
+            %tr
+              %td
+                Seventh note
+              %td
+                \=> a half step down from the root (octave)
+                
+          %h3
+            Activity
+
+          %p
+            Play the root on the keyboard to pick the key of the major scale. A scale degree (2nd, 3rd,..., 13th) is displayed above the keyboard.
+            Play that note on the keyboard.
+          %p
+            For example, if you press C as the root, and 5th appears as the scale degree, then you should press G.
+          %p
+            If you are right, you will be serenaded with a quick rendition of the scale, then the next degree appears.
+          %p
+            To change the root, move the mouse off and back onto the keyboard picture, then play the new root.
+            
+    -#qunit
+    
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Chord Crazy</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Shelley Marshall</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.      
